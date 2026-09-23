@@ -1,0 +1,114 @@
+* SPICE3 file created from ota2_miller.ext - technology: sky130A
+
+X0 nz n2 GND sky130_fd_pr__res_xhigh_po_0p69 l=1.04
+X1 vbias vbias GND GND sky130_fd_pr__nfet_01v8 ad=0.3625 pd=2.79 as=0.3625 ps=2.79 w=2.5 l=1
+X2 GND vbias vbias GND sky130_fd_pr__nfet_01v8 ad=0.725 pd=5.58 as=0.3625 ps=2.79 w=2.5 l=1
+X3 GND vbias vbias GND sky130_fd_pr__nfet_01v8 ad=0.3625 pd=2.79 as=0.3625 ps=2.79 w=2.5 l=1
+X4 GND vbias vbias GND sky130_fd_pr__nfet_01v8 ad=0.3625 pd=2.79 as=0.725 ps=5.58 w=2.5 l=1
+X5 vbias vbias GND GND sky130_fd_pr__nfet_01v8 ad=0.3625 pd=2.79 as=0.3625 ps=2.79 w=2.5 l=1
+X6 n1 vinm ntail GND sky130_fd_pr__nfet_01v8 ad=0.29 pd=2.29 as=0.58 ps=4.58 w=2 l=1
+X7 ntail vinm n1 GND sky130_fd_pr__nfet_01v8 ad=0.58 pd=4.58 as=0.29 ps=2.29 w=2 l=1
+X8 n2 vinp ntail GND sky130_fd_pr__nfet_01v8 ad=1.09765 pd=8.44 as=9.27275 ps=73.23 w=2 l=1
+X9 ntail vinp n2 GND sky130_fd_pr__nfet_01v8 ad=0 pd=0 as=0 ps=0 w=2 l=1
+X10 VDD n1 n1 VDD sky130_fd_pr__pfet_01v8 ad=0.58 pd=4.58 as=0.29 ps=2.29 w=2 l=1
+X11 n1 n1 VDD VDD sky130_fd_pr__pfet_01v8 ad=0.29 pd=2.29 as=0.58 ps=4.58 w=2 l=1
+X12 VDD n1 n2 VDD sky130_fd_pr__pfet_01v8 ad=11.02 pd=87.02 as=0.58 ps=4.58 w=2 l=1
+X13 n2 n1 VDD VDD sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0 w=2 l=1
+X14 ntail vbias GND GND sky130_fd_pr__nfet_01v8 ad=0.29 pd=2.29 as=0.29 ps=2.29 w=2 l=1
+X15 GND vbias ntail GND sky130_fd_pr__nfet_01v8 ad=0.29 pd=2.29 as=0.29 ps=2.29 w=2 l=1
+X16 ntail vbias GND GND sky130_fd_pr__nfet_01v8 ad=0.29 pd=2.29 as=0.29 ps=2.29 w=2 l=1
+X17 GND vbias ntail GND sky130_fd_pr__nfet_01v8 ad=0.29 pd=2.29 as=0.29 ps=2.29 w=2 l=1
+X18 ntail vbias GND GND sky130_fd_pr__nfet_01v8 ad=0.29 pd=2.29 as=0.29 ps=2.29 w=2 l=1
+X19 GND vbias ntail GND sky130_fd_pr__nfet_01v8 ad=0.29 pd=2.29 as=0.29 ps=2.29 w=2 l=1
+X20 GND vbias ntail GND sky130_fd_pr__nfet_01v8 ad=0.29 pd=2.29 as=0.58 ps=4.58 w=2 l=1
+X21 ntail vbias GND GND sky130_fd_pr__nfet_01v8 ad=0.29 pd=2.29 as=0.29 ps=2.29 w=2 l=1
+X22 GND vbias ntail GND sky130_fd_pr__nfet_01v8 ad=0.29 pd=2.29 as=0.29 ps=2.29 w=2 l=1
+X23 GND vbias ntail GND sky130_fd_pr__nfet_01v8 ad=0.29 pd=2.29 as=0.29 ps=2.29 w=2 l=1
+X24 ntail vbias GND GND sky130_fd_pr__nfet_01v8 ad=0.58 pd=4.58 as=0.29 ps=2.29 w=2 l=1
+X25 ntail vbias GND GND sky130_fd_pr__nfet_01v8 ad=0.29 pd=2.29 as=0.29 ps=2.29 w=2 l=1
+X26 VDD n2 vout VDD sky130_fd_pr__pfet_01v8 ad=0.29 pd=2.29 as=0.29 ps=2.29 w=2 l=1
+X27 VDD n2 vout VDD sky130_fd_pr__pfet_01v8 ad=0.58 pd=4.58 as=0.29 ps=2.29 w=2 l=1
+X28 vout n2 VDD VDD sky130_fd_pr__pfet_01v8 ad=0.29 pd=2.29 as=0.29 ps=2.29 w=2 l=1
+X29 vout n2 VDD VDD sky130_fd_pr__pfet_01v8 ad=0.29 pd=2.29 as=0.29 ps=2.29 w=2 l=1
+X30 vout n2 VDD VDD sky130_fd_pr__pfet_01v8 ad=0.29 pd=2.29 as=0.29 ps=2.29 w=2 l=1
+X31 vout n2 VDD VDD sky130_fd_pr__pfet_01v8 ad=0.29 pd=2.29 as=0.29 ps=2.29 w=2 l=1
+X32 VDD n2 vout VDD sky130_fd_pr__pfet_01v8 ad=0.29 pd=2.29 as=0.29 ps=2.29 w=2 l=1
+X33 vout n2 VDD VDD sky130_fd_pr__pfet_01v8 ad=0.29 pd=2.29 as=0.29 ps=2.29 w=2 l=1
+X34 VDD n2 vout VDD sky130_fd_pr__pfet_01v8 ad=0.29 pd=2.29 as=0.29 ps=2.29 w=2 l=1
+X35 VDD n2 vout VDD sky130_fd_pr__pfet_01v8 ad=0.29 pd=2.29 as=0.29 ps=2.29 w=2 l=1
+X36 vout n2 VDD VDD sky130_fd_pr__pfet_01v8 ad=0.29 pd=2.29 as=0.29 ps=2.29 w=2 l=1
+X37 VDD n2 vout VDD sky130_fd_pr__pfet_01v8 ad=0.29 pd=2.29 as=0.29 ps=2.29 w=2 l=1
+X38 VDD n2 vout VDD sky130_fd_pr__pfet_01v8 ad=0.29 pd=2.29 as=0.29 ps=2.29 w=2 l=1
+X39 VDD n2 vout VDD sky130_fd_pr__pfet_01v8 ad=0.29 pd=2.29 as=0.29 ps=2.29 w=2 l=1
+X40 vout n2 VDD VDD sky130_fd_pr__pfet_01v8 ad=0.29 pd=2.29 as=0.29 ps=2.29 w=2 l=1
+X41 vout n2 VDD VDD sky130_fd_pr__pfet_01v8 ad=0.29 pd=2.29 as=0.29 ps=2.29 w=2 l=1
+X42 vout n2 VDD VDD sky130_fd_pr__pfet_01v8 ad=0.29 pd=2.29 as=0.29 ps=2.29 w=2 l=1
+X43 vout n2 VDD VDD sky130_fd_pr__pfet_01v8 ad=0.29 pd=2.29 as=0.29 ps=2.29 w=2 l=1
+X44 vout n2 VDD VDD sky130_fd_pr__pfet_01v8 ad=0.29 pd=2.29 as=0.58 ps=4.58 w=2 l=1
+X45 VDD n2 vout VDD sky130_fd_pr__pfet_01v8 ad=0.29 pd=2.29 as=0.29 ps=2.29 w=2 l=1
+X46 VDD n2 vout VDD sky130_fd_pr__pfet_01v8 ad=0.29 pd=2.29 as=0.29 ps=2.29 w=2 l=1
+X47 VDD n2 vout VDD sky130_fd_pr__pfet_01v8 ad=0.29 pd=2.29 as=0.29 ps=2.29 w=2 l=1
+X48 vout n2 VDD VDD sky130_fd_pr__pfet_01v8 ad=0.29 pd=2.29 as=0.29 ps=2.29 w=2 l=1
+X49 VDD n2 vout VDD sky130_fd_pr__pfet_01v8 ad=0.29 pd=2.29 as=0.29 ps=2.29 w=2 l=1
+X50 vout n2 VDD VDD sky130_fd_pr__pfet_01v8 ad=0.29 pd=2.29 as=0.29 ps=2.29 w=2 l=1
+X51 VDD n2 vout VDD sky130_fd_pr__pfet_01v8 ad=0.29 pd=2.29 as=0.29 ps=2.29 w=2 l=1
+X52 vout n2 VDD VDD sky130_fd_pr__pfet_01v8 ad=0.29 pd=2.29 as=0.29 ps=2.29 w=2 l=1
+X53 VDD n2 vout VDD sky130_fd_pr__pfet_01v8 ad=0.29 pd=2.29 as=0.29 ps=2.29 w=2 l=1
+X54 GND vbias vout GND sky130_fd_pr__nfet_01v8 ad=0.725 pd=5.58 as=0.3625 ps=2.79 w=2.5 l=1
+X55 vout vbias GND GND sky130_fd_pr__nfet_01v8 ad=0.3625 pd=2.79 as=0.3625 ps=2.79 w=2.5 l=1
+X56 GND vbias vout GND sky130_fd_pr__nfet_01v8 ad=0.3625 pd=2.79 as=0.3625 ps=2.79 w=2.5 l=1
+X57 GND vbias vout GND sky130_fd_pr__nfet_01v8 ad=0.3625 pd=2.79 as=0.3625 ps=2.79 w=2.5 l=1
+X58 vout vbias GND GND sky130_fd_pr__nfet_01v8 ad=0.3625 pd=2.79 as=0.3625 ps=2.79 w=2.5 l=1
+X59 vout vbias GND GND sky130_fd_pr__nfet_01v8 ad=0.3625 pd=2.79 as=0.3625 ps=2.79 w=2.5 l=1
+X60 GND vbias vout GND sky130_fd_pr__nfet_01v8 ad=0.3625 pd=2.79 as=0.725 ps=5.58 w=2.5 l=1
+X61 GND vbias vout GND sky130_fd_pr__nfet_01v8 ad=0.3625 pd=2.79 as=0.3625 ps=2.79 w=2.5 l=1
+X62 vout vbias GND GND sky130_fd_pr__nfet_01v8 ad=0.3625 pd=2.79 as=0.3625 ps=2.79 w=2.5 l=1
+X63 GND vbias vout GND sky130_fd_pr__nfet_01v8 ad=0.3625 pd=2.79 as=0.3625 ps=2.79 w=2.5 l=1
+X64 vout vbias GND GND sky130_fd_pr__nfet_01v8 ad=0.3625 pd=2.79 as=0.3625 ps=2.79 w=2.5 l=1
+X65 GND vbias vout GND sky130_fd_pr__nfet_01v8 ad=0.3625 pd=2.79 as=0.3625 ps=2.79 w=2.5 l=1
+X66 GND vbias vout GND sky130_fd_pr__nfet_01v8 ad=0.3625 pd=2.79 as=0.3625 ps=2.79 w=2.5 l=1
+X67 vout vbias GND GND sky130_fd_pr__nfet_01v8 ad=0.3625 pd=2.79 as=0.3625 ps=2.79 w=2.5 l=1
+X68 GND vbias vout GND sky130_fd_pr__nfet_01v8 ad=0.3625 pd=2.79 as=0.3625 ps=2.79 w=2.5 l=1
+X69 vout vbias GND GND sky130_fd_pr__nfet_01v8 ad=0.3625 pd=2.79 as=0.3625 ps=2.79 w=2.5 l=1
+X70 GND vbias vout GND sky130_fd_pr__nfet_01v8 ad=0.3625 pd=2.79 as=0.3625 ps=2.79 w=2.5 l=1
+X71 vout vbias GND GND sky130_fd_pr__nfet_01v8 ad=0.3625 pd=2.79 as=0.3625 ps=2.79 w=2.5 l=1
+X72 vout vbias GND GND sky130_fd_pr__nfet_01v8 ad=0.3625 pd=2.79 as=0.3625 ps=2.79 w=2.5 l=1
+X73 GND vbias vout GND sky130_fd_pr__nfet_01v8 ad=0.3625 pd=2.79 as=0.3625 ps=2.79 w=2.5 l=1
+X74 GND vbias vout GND sky130_fd_pr__nfet_01v8 ad=0.3625 pd=2.79 as=0.3625 ps=2.79 w=2.5 l=1
+X75 vout vbias GND GND sky130_fd_pr__nfet_01v8 ad=0.3625 pd=2.79 as=0.3625 ps=2.79 w=2.5 l=1
+X76 GND vbias vout GND sky130_fd_pr__nfet_01v8 ad=0.3625 pd=2.79 as=0.3625 ps=2.79 w=2.5 l=1
+X77 vout vbias GND GND sky130_fd_pr__nfet_01v8 ad=0.3625 pd=2.79 as=0.3625 ps=2.79 w=2.5 l=1
+X78 vout vbias GND GND sky130_fd_pr__nfet_01v8 ad=0.3625 pd=2.79 as=0.3625 ps=2.79 w=2.5 l=1
+X79 nz vout sky130_fd_pr__cap_mim_m3_1 l=24.3 w=24.3
+C0 vinp n2 0.52418f
+C1 n1 n2 0.46778f
+C2 vout vbias 9.12158f
+C3 vout n2 8.28183f
+C4 n1 vinp 0.01723f
+C5 n1 vinm 0.54554f
+C6 nz n2 0.28498f
+C7 VDD vbias 0.02772f
+C8 vbias ntail 3.3355f
+C9 VDD n2 11.57179f
+C10 ntail n2 0.24488f
+C11 VDD n1 1.74211f
+C12 ntail vinp 0.21586f
+C13 n1 ntail 0.24713f
+C14 vout nz 52.17423f
+C15 vbias n2 0.11583f
+C16 ntail vinm 0.23204f
+C17 m1_3660_752# vbias 0.01884f
+C18 vout VDD 8.83975f
+C19 m1_3660_752# GND 0.02835f
+C20 nz GND 3.76004f
+C21 vout GND 23.2541f
+C22 n2 GND 5.80741f
+C23 ntail GND 7.02789f
+C24 vbias GND 34.90563f
+C25 VDD GND 36.48738f
+C26 n1 GND 0.93226f
+C27 vinp GND 0.94005f
+C28 vinm GND 0.94001f
+
+* --- auto-fixed floating nodes (no DC path) by fix_float.py ---
+Rfix0 m1_3660_752# 0 1T

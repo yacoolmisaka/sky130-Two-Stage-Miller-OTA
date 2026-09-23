@@ -1,0 +1,177 @@
+v {xschem version=3.4.8RC file_version=1.3}
+G {}
+K {}
+V {}
+S {}
+F {}
+E {}
+N 150 -70 150 10 {lab=#net1}
+N 340 -70 340 10 {lab=#net2}
+N 150 70 340 70 {lab=#net3}
+N 260 70 260 120 {lab=#net3}
+N 150 -160 590 -160 {lab=#net4}
+N 340 -160 340 -130 {lab=#net4}
+N 590 -160 590 -140 {lab=#net4}
+N 220 150 220 280 {lab=vbias}
+N 530 -70 530 -40 {lab=#net2}
+N 530 20 530 40 {lab=#net5}
+N 550 -110 550 -70 {lab=#net2}
+N 340 -70 550 -70 {lab=#net2}
+N 110 -100 110 -70 {lab=#net1}
+N 110 -70 150 -70 {lab=#net1}
+N 260 310 260 380 {lab=GND}
+N 260 340 750 340 {lab=GND}
+N 430 -10 510 -10 {lab=GND}
+N 430 -10 430 340 {lab=GND}
+N 260 180 430 180 {lab=GND}
+N 340 40 430 40 {lab=GND}
+N 150 40 220 40 {lab=GND}
+N 220 -10 220 40 {lab=GND}
+N 220 -10 430 -10 {lab=GND}
+N 750 340 840 340 {lab=GND}
+N 840 330 840 340 {lab=GND}
+N 750 170 840 170 {lab=GND}
+N 150 -70 300 -70 {lab=#net1}
+N 300 -100 300 -70 {lab=#net1}
+N 590 -80 910 -80 {lab=vout}
+N 750 -80 750 110 {lab=vout}
+N 60 40 110 40 {lab=vinm}
+N 300 -40 300 40 {lab=vinp}
+N 50 -40 300 -40 {lab=vinp}
+N 220 250 260 250 {lab=vbias}
+N 220 210 710 210 {lab=vbias}
+N 710 140 710 210 {lab=vbias}
+N 340 -130 340 -100 {lab=#net4}
+N 590 -140 590 -110 {lab=#net4}
+N 260 150 260 180 {lab=GND}
+N 260 280 260 310 {lab=GND}
+N 840 170 840 330 {lab=GND}
+N 750 140 750 170 {lab=GND}
+N 530 100 750 100 {lab=vout}
+N 150 -200 150 -180 {lab=#net4}
+N 150 -180 150 -130 {lab=#net4}
+N 150 -130 150 -100 {lab=#net4}
+N 80 210 220 210 {lab=vbias}
+C {/home/yacool/sky130_volare_pdk/volare/sky130/versions/c6d73a35f524070e85faff4a6a9eef49553ebc2b/sky130A/libs.tech/xschem/sky130_fd_pr/nfet_01v8.sym} 240 150 0 0 {name=M5
+L=1
+W=24
+nf=12
+mult=1
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=nfet_01v8
+spiceprefix=X
+}
+C {/home/yacool/sky130_volare_pdk/volare/sky130/versions/c6d73a35f524070e85faff4a6a9eef49553ebc2b/sky130A/libs.tech/xschem/sky130_fd_pr/nfet_01v8.sym} 730 140 0 0 {name=M7
+L=1
+W=62.5
+nf=25
+mult=1
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=nfet_01v8
+spiceprefix=X
+}
+C {/home/yacool/sky130_volare_pdk/volare/sky130/versions/c6d73a35f524070e85faff4a6a9eef49553ebc2b/sky130A/libs.tech/xschem/sky130_fd_pr/nfet_01v8.sym} 240 280 0 0 {name=Mref
+L=1
+W=12.5
+nf=5
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=nfet_01v8
+spiceprefix=X
+}
+C {/home/yacool/sky130_volare_pdk/volare/sky130/versions/c6d73a35f524070e85faff4a6a9eef49553ebc2b/sky130A/libs.tech/xschem/sky130_fd_pr/res_xhigh_po_0p69.sym} 530 -10 0 0 {name=Rz
+L=1.035
+model=res_xhigh_po_0p69
+spiceprefix=X
+mult=1}
+C {/home/yacool/sky130_volare_pdk/volare/sky130/versions/c6d73a35f524070e85faff4a6a9eef49553ebc2b/sky130A/libs.tech/xschem/sky130_fd_pr/cap_mim_m3_1.sym} 530 70 0 0 {name=Cc model=cap_mim_m3_1 W=24.3 L=24.3 MF=1 spiceprefix=X}
+C {/home/yacool/sky130_volare_pdk/volare/sky130/versions/c6d73a35f524070e85faff4a6a9eef49553ebc2b/sky130A/libs.tech/xschem/sky130_fd_pr/pfet_01v8.sym} 130 -100 0 0 {name=M3
+L=1
+W=4
+nf=2
+mult=1
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=pfet_01v8
+spiceprefix=X
+}
+C {/home/yacool/sky130_volare_pdk/volare/sky130/versions/c6d73a35f524070e85faff4a6a9eef49553ebc2b/sky130A/libs.tech/xschem/sky130_fd_pr/pfet_01v8.sym} 320 -100 0 0 {name=M4
+L=1
+W=4
+nf=2
+mult=1
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=pfet_01v8
+spiceprefix=X
+}
+C {/home/yacool/sky130_volare_pdk/volare/sky130/versions/c6d73a35f524070e85faff4a6a9eef49553ebc2b/sky130A/libs.tech/xschem/sky130_fd_pr/pfet_01v8.sym} 570 -110 0 0 {name=M6
+L=1
+W=56
+nf=28
+mult=1
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=pfet_01v8
+spiceprefix=X
+}
+C {devices/iopin.sym} 260 380 0 0 {name=p2 lab=GND}
+C {/home/yacool/sky130_volare_pdk/volare/sky130/versions/c6d73a35f524070e85faff4a6a9eef49553ebc2b/sky130A/libs.tech/xschem/sky130_fd_pr/nfet_01v8.sym} 130 40 0 0 {name=M1
+L=1
+W=4
+nf=2
+mult=1
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=nfet_01v8
+spiceprefix=X
+}
+C {/home/yacool/sky130_volare_pdk/volare/sky130/versions/c6d73a35f524070e85faff4a6a9eef49553ebc2b/sky130A/libs.tech/xschem/sky130_fd_pr/nfet_01v8.sym} 320 40 0 0 {name=M2
+L=1
+W=4
+nf=2
+mult=1
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=nfet_01v8
+spiceprefix=X
+}
+C {devices/ipin.sym} 50 -40 0 0 {name=p3 lab=vinp}
+C {devices/ipin.sym} 60 40 0 0 {name=p4 lab=vinm}
+C {devices/opin.sym} 910 -80 0 0 {name=p5 lab=vout}
+C {devices/ipin.sym} 80 210 0 0 {name=p6 lab=vbias}
+C {devices/iopin.sym} 150 -200 0 0 {name=p1 lab=VDD}

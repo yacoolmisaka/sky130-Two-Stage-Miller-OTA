@@ -1,0 +1,41 @@
+* ============================================================================
+*  lvs_devices.spice -- LVS 专用简化器件定义
+* -----------------------------------------------------------------------------
+*  背景：本 volare 安装的 sky130 PDK 缺 cdl/ 目录，而 spice/ 下的 .pm3.spice
+*        是多层包装结构（nfet_01v8 -> __model -> binned model），netgen 要穿透
+*        三层才能看到真正的 MOS，导致 series/parallel 合并规则无法生效。
+*
+*  本文件把 4 个用到的器件定义为【单层直接的 MOS/电阻/电容】：
+*    - netgen 原生支持 MOS 的并联合并（w 相加）
+*    - 端口顺序与 magic 提取网表 / xschem 导出网表一致：D G S B
+*  电学上只保留连接关系，参数全部交由 setup 文件的 tolerance/delete 规则处理。
+* =============================================================================
+
+* --- NMOS（端口序 D G S B）---
+.subckt sky130_fd_pr__nfet_01v8 D G S B
+M0 D G S B nfet_lvs W=1 L=1
+.ends
+
+* --- PMOS（端口序 D G S B）---
+.subckt sky130_fd_pr__pfet_01v8 D G S B
+M0 D G S B pfet_lvs W=1 L=1
+.ends
+
+* --- 高阻 poly 电阻（3 端：两端 + 衬底）---
+.subckt sky130_fd_pr__res_xhigh_po_0p69 R0 R1 B
+R0 R0 R1 1k
+.ends
+
+* --- MiM 电容（2 端）---
+.subckt sky130_fd_pr__cap_mim_m3_1 C0 C1
+C0 C0 C1 1p
+.ends
+
+* --- 带后缀的实例包装器（magic 提取网表里用的名字）---
+.subckt sky130_fd_pr__res_xhigh_po_0p69_96AYDP R0 R1 B
+R0 R0 R1 1k
+.ends
+
+.subckt sky130_fd_pr__cap_mim_m3_1_PMLRN3 C0 C1
+C0 C0 C1 1p
+.ends

@@ -1,0 +1,75 @@
+====================================================================
+ SKY130 两级 Miller OTA —— 手算 sizing
+====================================================================
+ 设计目标 : GBW=15.0MHz  CL=2.00pF  Cc=1.20pF  SR>=10V/us  Iss=20uA
+
+[Step 1] 米勒电容 Cc 校验
+  Cc/CL = 0.600   判据 Cc >= 0.22*CL = 0.440 pF   -> OK
+
+[Step 2] 尾电流 (由 SR 定)
+  SR = Iss/Cc  =>  Iss >= 12.00 uA
+  取 Iss = 20.00 uA  -> SR = 16.67 V/us OK
+
+[Step 3] M1/M2 差分输入对 (由 GBW 定)
+  gm1 = 2*pi*GBW*Cc = 113.1 uS
+  Id1 = Iss/2 = 10.00 uA   ->  Vov1 = 2*Id1/gm1 = 0.177 V  OK
+  (W/L)1 = gm1^2/(2*Kn'*Id1) = 3.70
+  => 取 M1/M2: W=4.0um (2 finger x 2.0um)  L=1.0um  (W/L=4.0)   实际 gm1=117.6uS  GBW=15.60MHz
+
+[Step 4] M3/M4 PMOS 电流镜负载 (由 ICMR 上限定)
+  Vicm(max) = VDD-|Vthp|-|Vov3|+Vthn >= 1.4 V  =>  |Vov3| <= 0.350 V  =>  (W/L)3 >= 2.24
+  => 取 M3/M4: W=4.0um (2 finger x 2.0um)  L=1.0um  (W/L=4.0)   |Vov3|=0.262V  gm3=76.4uS
+  实际 Vicm(max) = 1.488 V  OK
+
+[Step 5] M5 尾电流源 (由 ICMR 下限定)
+  基准管 Mref: (W/L)ref = 5.0  (Iref=10.0uA, Vov_ref=0.152V, Vgs=0.602V)
+  Vicm(min) = Vov5 + Vthn + Vov1 >= ... 要求 <= 0.8 V => (W/L)5 >= 7.71
+  按镜像比 (W/L)5 = (Iss/Iref)*(W/L)ref = 10.0  OK
+  => 取 M5: W=10.0um  L=1.0um   Vov5=0.152V   实际 Vicm(min) = 0.779 V
+
+[Step 6] M6 第二级共源放大管 (由 PM>=60deg 定 gm6)
+  gm6 >= 2.2*(CL/Cc)*gm1 = 431.4 uS
+  I6  >= SR*(CL+Cc)      = 32.00 uA   (取 I6=50.0uA) OK
+  (W/L)6 >= gm6^2/(2*Kp'*I6) = 25.49   <- 仅为 2.2 系数粗估
+  按 PM >= 60 deg 迭代 M6 栅宽:
+    W6= 28.0um (nf= 7)  gm6= 452.1uS  p2= 35.98MHz  z1= 59.96MHz  PM= 52.0 deg
+    W6= 32.0um (nf= 8)  gm6= 483.3uS  p2= 38.46MHz  z1= 64.10MHz  PM= 54.2 deg
+    W6= 36.0um (nf= 9)  gm6= 512.6uS  p2= 40.79MHz  z1= 67.99MHz  PM= 56.1 deg
+    W6= 40.0um (nf=10)  gm6= 540.4uS  p2= 43.00MHz  z1= 71.67MHz  PM= 57.8 deg
+    W6= 44.0um (nf=11)  gm6= 566.7uS  p2= 45.10MHz  z1= 75.17MHz  PM= 59.2 deg
+    W6= 48.0um (nf=12)  gm6= 591.9uS  p2= 47.11MHz  z1= 78.51MHz  PM= 60.4 deg
+  => 取 M6: W=48.0um (12 finger x 4.0um)  L=1.0um   gm6=591.9uS  |Vov6|=0.169V  PM=60.4 deg  OK
+
+[Step 7] M7 第二级电流沉 (镜像自 Mref)
+  (W/L)7 = (I6/Iref)*(W/L)ref = 25.0
+  => 取 M7: W=25.0um (5 finger x 5.0um)  L=1.0um   Vov7=0.152V
+
+[Step 8] 性能预估
+  第一级: ro2||ro4 = 0.769 Mohm  Av1 = 90.5 (39.1 dB)
+  第二级: ro6||ro7 = 0.154 Mohm  Av2 = 91.1 (39.2 dB)
+  总增益 Av  = 8241 V/V = 78.3 dB   (未计 CL 加载/体效应, 实际低 5-10dB)
+  GBW        = 15.60 MHz
+  主极点 p1  = 1.89 kHz   (米勒分裂后)
+  次极点 p2  = gm6/(2*pi*CL) = 47.11 MHz
+  RHP 零点 z1= gm6/(2*pi*Cc) = 78.51 MHz  (z1/GBW = 5.03)
+  粗略 PM    = 60.4 deg   (无 Rz 时 z1 会吃掉相位, 若 <55deg 需加 Rz 或加大 gm6)
+  SR(+) = Iss/Cc     = 16.67 V/us
+  SR(-) = I6/(CL+Cc) = 15.62 V/us
+  静态电流 = 80.0 uA   功耗 = 144.0 uW
+
+====================================================================
+ 尺寸汇总表 (手算起点)
+====================================================================
+器件      类型       W总(um)  L(um)    单指W   nf    W/L  Id(uA)  说明
+M1,M2   NMOS        4.0    1.0    2.0    2    4.0    10.0  差分输入对 (共质心)
+M3,M4   PMOS        4.0    1.0    2.0    2    4.0    10.0  电流镜负载 (M3 二极管)
+M5      NMOS       10.0    1.0    5.0    2   10.0    20.0  尾电流源
+M6      PMOS       48.0    1.0    4.0   12   48.0    50.0  第二级共源 (主增益)
+M7      NMOS       25.0    1.0    5.0    5   25.0    50.0  第二级电流沉
+Mref    NMOS        5.0    1.0    5.0    1    5.0    10.0  偏置基准 (二极管连接)
+
+  >> ngspice 网表写法: W = 单指W, nf = 指数 (BSIM4 约定, 总宽 = W * nf)
+  >> 例: XM6 vout n2 vdd vdd pfet W=4u L=1u nf=14   (总宽 56um)
+
+  Cc = 1.20 pF (MiM 优先, 其次 MOSCAP)    CL = 2.00 pF
+====================================================================

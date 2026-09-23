@@ -1,0 +1,56 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1789740831
+<< pwell >>
+rect 34638 4661 34864 4662
+rect 35808 4661 36038 4662
+rect 37014 4661 37044 4662
+<< metal1 >>
+rect 3980 7066 6270 7530
+<< metal2 >>
+rect 3280 -2088 7358 -1440
+use sky130_fd_pr__cap_mim_m3_1_PMLRN3  Cc
+timestamp 1789577101
+transform 1 0 13546 0 1 4682
+box -2616 -2470 2616 2470
+use sky130_fd_pr__nfet_01v8_7KZ2AN  M1
+timestamp 1789577101
+transform 1 0 4372 0 1 4357
+box -425 -410 425 410
+use sky130_fd_pr__nfet_01v8_7KZ2AN  M2
+timestamp 1789577101
+transform 1 0 5685 0 1 4372
+box -425 -410 425 410
+use sky130_fd_pr__pfet_01v8_8FHKLD  M3
+timestamp 1789577101
+transform 1 0 4397 0 1 6425
+box -425 -419 425 419
+use sky130_fd_pr__pfet_01v8_8FHKLD  M4
+timestamp 1789577101
+transform 1 0 5685 0 1 6441
+box -425 -419 425 419
+use sky130_fd_pr__nfet_01v8_SND6KL  M5
+timestamp 1789577101
+transform 1 0 5305 0 1 1142
+box -1715 -410 1715 410
+use sky130_fd_pr__pfet_01v8_8MY6K8  M6
+timestamp 1789577101
+transform 1 0 24595 0 1 5043
+box -3779 -419 3779 419
+use sky130_fd_pr__nfet_01v8_9A3M24  M7
+timestamp 1789577101
+transform 1 0 24238 0 1 2588
+box -3392 -460 3392 460
+use sky130_fd_pr__nfet_01v8_RNGHDB  Mref
+timestamp 1789577101
+transform 1 0 5170 0 1 -206
+box -812 -460 812 460
+use sky130_fd_pr__res_xhigh_po_0p69_96AYDP  Rz
+timestamp 1789577101
+transform 1 0 13623 0 1 494
+box -235 -702 235 702
+<< labels >>
+rlabel metal1 s 5690 7204 6540 8042 1 VDD
+rlabel metal1 s 5586 -2012 6436 -1174 1 GND
+<< end >>
